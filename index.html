@@ -1,9 +1,8 @@
-<!doctype html>
-<script type="application/json" id="cowork-artifact-meta">
+<!doctype html><script type="application/json" id="cowork-artifact-meta">
 {
   "name": "Painel Churn Pipelovers",
   "schemaVersion": 1,
-  "description": "Painel de Churn da PipeLovers (B2B): tendência mês a mês, churn do mês corrente por conta com motivo completo, forecast do próximo mês e análises (LTV × CSM × motivo, correlação de Pearson, MRR por CSM, distribuição de LTV, forecast por CSM). Fonte: Backlog CSX — Governança de Métricas. Snapshot 16/06/2026."
+  "description": "Painel de Churn da PipeLovers (B2B): tendência mês a mês (Set/25–Jun/26), churn do mês corrente por conta com motivo completo, forecast do próximo mês e análises (LTV × CSM × motivo, correlação de Pearson, MRR por CSM, distribuição de LTV, forecast por CSM). Fonte: Backlog CSX — Governança de Métricas. Sincronizado em 17/06/2026 (planilha enviada). Junho: 25 contas · R$ 19.359,45."
 }
 </script>
 <html lang="pt-BR">
@@ -81,25 +80,25 @@
 <div class="wrap">
   <header class="top">
     <h1>Painel de Churn — PipeLovers · B2B</h1>
-    <div class="sub">Comparativo Junho × Maio/2026 · base de R$ 370.551,06 de MRR · 346 clientes</div>
-    <div class="src">Fonte: <strong>Backlog CSX — Governança de Métricas</strong> · snapshot 16/06/2026 · <a class="link" href="https://gabrielsbrasil.github.io/churn-dashboard/">gabrielsbrasil.github.io/churn-dashboard</a></div>
+    <div class="sub">Comparativo Junho × Maio/2026 · base de R$ 367.265,91 de MRR · 342 clientes</div>
+    <div class="src">Fonte: <strong>Backlog CSX — Governança de Métricas</strong> · sincronizado 17/06/2026 · <a class="link" href="https://gabrielsbrasil.github.io/churn-dashboard/">gabrielsbrasil.github.io/churn-dashboard</a></div>
   </header>
 
   <section class="kpis">
     <div class="kpi accent">
       <div class="lab">Churn Junho (em curso)</div>
-      <div class="val">R$ 15.709,65</div>
-      <div class="det">22 contas · 4,24% do MRR</div>
+      <div class="val">R$ 19.359,45</div>
+      <div class="det">25 contas · 5,27% do MRR</div>
     </div>
     <div class="kpi">
       <div class="lab">Churn Maio (fechado)</div>
       <div class="val">R$ 21.939,53</div>
-      <div class="det">34 contas · 5,92% do MRR</div>
+      <div class="det">34 contas · 5,97% do MRR</div>
     </div>
     <div class="kpi">
       <div class="lab">Variação m/m</div>
-      <div class="val down">−R$ 6.229,88</div>
-      <div class="det">−1,68 p.p. · −12 contas (parcial)</div>
+      <div class="val down">−R$ 2.580,08</div>
+      <div class="det">−0,70 p.p. · −9 contas (parcial)</div>
     </div>
     <div class="kpi">
       <div class="lab">Forecast Julho</div>
@@ -134,8 +133,8 @@
         <table>
           <tbody>
             <tr><td>Pico recente</td><td class="num"><strong>Jan/26 · R$ 41.358 (11,16%)</strong></td></tr>
-            <tr><td>Maio (fechado)</td><td class="num">R$ 21.939,53 · 5,92%</td></tr>
-            <tr><td>Junho (parcial, dia 16)</td><td class="num">R$ 15.709,65 · 4,24%</td></tr>
+            <tr><td>Maio (fechado)</td><td class="num">R$ 21.939,53 · 5,97%</td></tr>
+            <tr><td>Junho (parcial · 17/06)</td><td class="num">R$ 19.359,45 · 5,27%</td></tr>
             <tr><td>Média 10 meses</td><td class="num" id="avgCell">—</td></tr>
             <tr><td>Tendência</td><td class="num"><span class="down">queda vs maio</span></td></tr>
           </tbody>
@@ -148,7 +147,7 @@
   <div class="panel" id="mes">
     <div class="card">
       <h2>Churn de Junho/2026 — por conta</h2>
-      <p class="cap">22 contas · R$ 15.709,65 · 4,24% do MRR. Clique nos cabeçalhos para ordenar. <span class="pill ds">downsell</span> = redução de plano · <span class="pill pain">LTV ≥ 12m</span> = churn doloroso.</p>
+      <p class="cap">25 contas · R$ 19.359,45 · 5,27% do MRR. Clique nos cabeçalhos para ordenar. <span class="pill ds">downsell</span> = redução de plano · <span class="pill pain">LTV ≥ 12m</span> = churn doloroso.</p>
       <div style="overflow-x:auto">
         <table id="mesTable">
           <thead>
@@ -192,8 +191,8 @@
     <div class="card">
       <h2>Correlação LTV × MRR (churns de junho)</h2>
       <div class="corr">
-        <div class="r" id="pearsonVal">r = −0,163</div>
-        <div class="txt">Correlação de Pearson <strong>fraca e negativa</strong> entre o tempo de vida (LTV, meses) e o MRR perdido por conta (n = 20 com LTV conhecido). Na prática: as maiores perdas de receita de junho vêm de contas relativamente <em>novas</em> (ex.: ALS 7m, Quark 3m, ICOM 7m), enquanto contas de LTV alto que saíram têm ticket menor (ex.: Menver 22m · R$ 349, App Sistemas 23m · R$ 646).</div>
+        <div class="r" id="pearsonVal">r = −0,074</div>
+        <div class="txt">Correlação de Pearson <strong>praticamente nula</strong> entre o tempo de vida (LTV, meses) e o MRR perdido por conta (n = 22 com LTV conhecido). A maior perda de junho vem de uma conta de LTV mediano (Urânia Planetário, 12m · R$ 2.758,10), enquanto contas de LTV muito alto tendem a sair com ticket menor (ex.: Umbler 26m · R$ 595,70, Menver 22m · R$ 349, App Sistemas 23m · R$ 646). Ou seja: tempo de casa não protege a receita, mas as maiores perdas também não se concentram nas contas mais antigas.</div>
       </div>
       <div class="chart-box" style="height:320px;margin-top:12px"><canvas id="scatterChart"></canvas></div>
     </div>
@@ -221,7 +220,7 @@
     </div>
   </div>
 
-  <footer>PipeLovers · monitor diário de churn · gerado em 16/06/2026 · dados: Backlog CSX (Governança de Métricas)</footer>
+  <footer>PipeLovers · monitor diário de churn · gerado em 17/06/2026 · dados: Backlog CSX — Governança de Métricas (sync 17/06/2026)</footer>
 </div>
 
 <script>
@@ -229,14 +228,14 @@ const BLUE="#266EF2", DARK="#0F052E", BG="#EBF2F7";
 const CSM_COLOR={Nicoly:"#266EF2",Gustavo:"#0F052E",Natalia:"#1f9d6b",Camila:"#e0a000",Priscila:"#e1495b",Barbara:"#8a5cf6"};
 const brl=n=>n.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});
 
-/* ---- DADOS (snapshot Backlog CSX 16/06/2026) ---- */
+/* ---- DADOS (Backlog CSX — Governança de Métricas · sync 17/06/2026) ---- */
 const trend=[
  {m:"Set/25",v:17236.43,p:4.65},{m:"Out/25",v:23996.85,p:6.48},{m:"Nov/25",v:15573.15,p:4.20},
  {m:"Dez/25",v:16187.07,p:4.37},{m:"Jan/26",v:41358.24,p:11.16},{m:"Fev/26",v:20710.85,p:5.59},
  {m:"Mar/26",v:23069.25,p:6.23},{m:"Abr/26",v:29233.62,p:7.89},{m:"Mai/26",v:21939.53,p:5.92},
- {m:"Jun/26",v:15709.65,p:4.24,partial:true}
+ {m:"Jun/26",v:19359.45,p:5.27,partial:true}
 ];
-const logoCounts=[null,null,null,20,33,32,null,null,34,22]; // contas/mês onde consolidado
+const logoCounts=[null,null,null,20,33,32,null,null,34,25]; // contas/mês onde consolidado
 
 const june=[
  {emp:"ARTIQ",mrr:599.00,csm:"Nicoly",ltv:4,mot:"Cancelamento após saída dos dois principais colaboradores do comercial. Houve tentativa de reversão com apoio em contratação, reestruturação do time e flexibilização temporária para 1 acesso, mas o cliente assumirá sozinho a operação de vendas e não conseguirá manter a plataforma. Deixou aberta a possibilidade de retorno futuro."},
@@ -260,7 +259,10 @@ const june=[
  {emp:"Icom Marketing",mrr:1249.00,csm:"Priscila",ltv:7,mot:"Encerramento por baixo engajamento da equipe com a plataforma e fase de reestruturação de time. Foram feitas tentativas de reativação e ações de adesão, mas o cliente optou por interromper a parceria neste momento."},
  {emp:"Datasigh",mrr:789.00,csm:"Priscila",ltv:6,mot:"Reestruturação da equipe comercial e redirecionamento de prioridades levaram a suspender temporariamente os investimentos em capacitação. O gerente entusiasta do projeto deixou a empresa — perdemos o influenciador interno."},
  {emp:"Quark (Downsell)",mrr:1409.00,csm:"Priscila",ltv:3,ds:true,mot:"Reconhece o valor da solução, mas a empresa não pode manter o investimento agora por outras prioridades. Como o gestor pagava do próprio bolso e não assumiria a mensalidade integral, permanecerá apenas com o acesso individual Full Pass. Decisão ligada ao momento, não à percepção de valor."},
- {emp:"Trust Control",mrr:1231.58,csm:"Gustavo",ltv:null,mot:"Conta consolidada no fechamento de churn de junho na governança (carteira do Gustavo). Detalhe de motivo ainda não consolidado na planilha."}
+ {emp:"Trust Control",mrr:1231.58,csm:"Gustavo",ltv:null,mot:"Conta consolidada no fechamento de churn de junho na governança (carteira do Gustavo). Detalhe de motivo ainda não consolidado na planilha."},
+ {emp:"Urânia Planetário",mrr:2758.10,csm:"Barbara",ltv:12,mot:"Reestruturação e redução de custos da empresa para os próximos meses. Sabem que o faturamento do 2º semestre será praticamente zero (nov, dez, jan e fev), então precisam formar caixa para cobrir despesas. Já cortaram todas as plataformas em contrato. A tentativa de retenção com pagamento reduzido por um período não vingou. Perceberam muito valor, tinham bom engajamento e fizeram 2 upsells, mas o momento exige o cancelamento; consideram retornar quando tiverem fôlego de caixa."},
+ {emp:"Proesc (Downsell)",mrr:296.00,csm:"Barbara",ltv:11,ds:true,mot:"Redução de quadro — saíram 4 pessoas do time e não irão repor. Pediram redução de plano e ficarão com 13 posições. Novo valor mensal: R$ 1.715,00."},
+ {emp:"Umbler (Downsell)",mrr:595.70,csm:"Barbara",ltv:26,ds:true,mot:"Downsell negociado com fidelidade até dezembro/2026 (contrato assinado): 23 usuários ativos mantidos, novo valor mensal R$ 1.587,00 (a partir de jun/2026), R$ 69,00/usuário, manutenção de acessos e benefícios, 1 cortesia na Academia B2B e elegibilidade à Certificação em IA para Vendedores (julho). David satisfeito com a alternativa, conciliando ajuste financeiro e continuidade do desenvolvimento do time."}
 ];
 
 const forecast=[
@@ -396,7 +398,8 @@ function drawAna(){
     Gustavo:"Baixa adesão e perda de contato pós-passagem; contas de LTV alto e ticket alto.",
     Natalia:"Corte de custos e internalização de treinamento (reestruturação).",
     Camila:"Falta de aderência do conteúdo e diminuição de time comercial.",
-    Priscila:"Reestruturação comercial e contenção de investimento (perda de sponsor)."
+    Priscila:"Reestruturação comercial e contenção de investimento (perda de sponsor).",
+    Barbara:"Reestruturação e redução de custos; downsells por ajuste de quadro/financeiro (Urânia, Proesc, Umbler)."
   };
   const cross={};june.forEach(j=>{const c=cross[j.csm]||(cross[j.csm]={n:0,mrr:0,ltvs:[]});c.n++;c.mrr+=j.mrr;if(j.ltv!=null)c.ltvs.push(j.ltv);});
   document.getElementById('crossBody').innerHTML=Object.keys(cross).sort((a,b)=>cross[b].mrr-cross[a].mrr).map(k=>{
