@@ -2,7 +2,7 @@
 {
   "name": "Painel Churn Pipelovers",
   "schemaVersion": 1,
-  "description": "Painel de Churn da PipeLovers (B2B): tendência mês a mês (Set/25–Jun/26), churn do mês corrente por conta com motivo completo, forecast do próximo mês e análises (LTV × CSM × motivo, correlação de Pearson, MRR por CSM, distribuição de LTV, forecast por CSM). Fonte: Backlog CSX — Governança de Métricas. Sincronizado em 17/06/2026 (planilha enviada). Junho: 25 contas · R$ 19.359,45."
+  "description": "Painel de Churn da PipeLovers (B2B): tendência mês a mês (Set/25–Jun/26), churn do mês corrente por conta com motivo completo, forecast do próximo mês e análises (LTV × CSM × motivo, correlação de Pearson, MRR por CSM, distribuição de LTV, forecast por CSM). Fonte: Backlog CSX — Governança de Métricas. Snapshot 18/06/2026."
 }
 </script>
 <html lang="pt-BR">
@@ -80,20 +80,20 @@
 <div class="wrap">
   <header class="top">
     <h1>Painel de Churn — PipeLovers · B2B</h1>
-    <div class="sub">Comparativo Junho × Maio/2026 · base de R$ 367.265,91 de MRR · 342 clientes</div>
-    <div class="src">Fonte: <strong>Backlog CSX — Governança de Métricas</strong> · sincronizado 17/06/2026 · <a class="link" href="https://gabrielsbrasil.github.io/churn-dashboard/">gabrielsbrasil.github.io/churn-dashboard</a></div>
+    <div class="sub">Comparativo Junho × Maio/2026 · base de R$ 366.665,91 de MRR · 343 clientes</div>
+    <div class="src">Fonte: <strong>Backlog CSX — Governança de Métricas</strong> · sincronizado 18/06/2026 · <a class="link" href="https://gabrielsbrasil.github.io/churn-dashboard/">gabrielsbrasil.github.io/churn-dashboard</a></div>
   </header>
 
   <section class="kpis">
     <div class="kpi accent">
       <div class="lab">Churn Junho (em curso)</div>
       <div class="val">R$ 19.359,45</div>
-      <div class="det">25 contas · 5,27% do MRR</div>
+      <div class="det">25 contas · 5,28% do MRR</div>
     </div>
     <div class="kpi">
       <div class="lab">Churn Maio (fechado)</div>
       <div class="val">R$ 21.939,53</div>
-      <div class="det">34 contas · 5,97% do MRR</div>
+      <div class="det">34 contas · 5,98% do MRR</div>
     </div>
     <div class="kpi">
       <div class="lab">Variação m/m</div>
@@ -133,8 +133,8 @@
         <table>
           <tbody>
             <tr><td>Pico recente</td><td class="num"><strong>Jan/26 · R$ 41.358 (11,16%)</strong></td></tr>
-            <tr><td>Maio (fechado)</td><td class="num">R$ 21.939,53 · 5,97%</td></tr>
-            <tr><td>Junho (parcial · 17/06)</td><td class="num">R$ 19.359,45 · 5,27%</td></tr>
+            <tr><td>Maio (fechado)</td><td class="num">R$ 21.939,53 · 5,98%</td></tr>
+            <tr><td>Junho (parcial · 18/06)</td><td class="num">R$ 19.359,45 · 5,28%</td></tr>
             <tr><td>Média 10 meses</td><td class="num" id="avgCell">—</td></tr>
             <tr><td>Tendência</td><td class="num"><span class="down">queda vs maio</span></td></tr>
           </tbody>
@@ -147,7 +147,7 @@
   <div class="panel" id="mes">
     <div class="card">
       <h2>Churn de Junho/2026 — por conta</h2>
-      <p class="cap">25 contas · R$ 19.359,45 · 5,27% do MRR. Clique nos cabeçalhos para ordenar. <span class="pill ds">downsell</span> = redução de plano · <span class="pill pain">LTV ≥ 12m</span> = churn doloroso.</p>
+      <p class="cap">25 contas · R$ 19.359,45 · 5,28% do MRR. Clique nos cabeçalhos para ordenar. <span class="pill ds">downsell</span> = redução de plano · <span class="pill pain">LTV ≥ 12m</span> = churn doloroso.</p>
       <div style="overflow-x:auto">
         <table id="mesTable">
           <thead>
@@ -220,7 +220,7 @@
     </div>
   </div>
 
-  <footer>PipeLovers · monitor diário de churn · gerado em 17/06/2026 · dados: Backlog CSX — Governança de Métricas (sync 17/06/2026)</footer>
+  <footer>PipeLovers · monitor diário de churn · gerado em 18/06/2026 · dados: Backlog CSX — Governança de Métricas (sync 18/06/2026)</footer>
 </div>
 
 <script>
@@ -228,12 +228,12 @@ const BLUE="#266EF2", DARK="#0F052E", BG="#EBF2F7";
 const CSM_COLOR={Nicoly:"#266EF2",Gustavo:"#0F052E",Natalia:"#1f9d6b",Camila:"#e0a000",Priscila:"#e1495b",Barbara:"#8a5cf6"};
 const brl=n=>n.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});
 
-/* ---- DADOS (Backlog CSX — Governança de Métricas · sync 17/06/2026) ---- */
+/* ---- DADOS (Backlog CSX — Governança de Métricas · sync 18/06/2026) ---- */
 const trend=[
  {m:"Set/25",v:17236.43,p:4.65},{m:"Out/25",v:23996.85,p:6.48},{m:"Nov/25",v:15573.15,p:4.20},
  {m:"Dez/25",v:16187.07,p:4.37},{m:"Jan/26",v:41358.24,p:11.16},{m:"Fev/26",v:20710.85,p:5.59},
- {m:"Mar/26",v:23069.25,p:6.23},{m:"Abr/26",v:29233.62,p:7.89},{m:"Mai/26",v:21939.53,p:5.92},
- {m:"Jun/26",v:19359.45,p:5.27,partial:true}
+ {m:"Mar/26",v:23069.25,p:6.23},{m:"Abr/26",v:29233.62,p:7.89},{m:"Mai/26",v:21939.53,p:5.98},
+ {m:"Jun/26",v:19359.45,p:5.28,partial:true}
 ];
 const logoCounts=[null,null,null,20,33,32,null,null,34,25]; // contas/mês onde consolidado
 
